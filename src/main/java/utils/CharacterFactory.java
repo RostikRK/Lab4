@@ -1,6 +1,7 @@
 package utils;
 
 import characters.Noble;
+import characters.Character;
 import lombok.SneakyThrows;
 import org.reflections.Reflections;
 
