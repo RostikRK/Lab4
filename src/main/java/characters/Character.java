@@ -1,5 +1,6 @@
 package characters;
 
+import kick.BasicKick;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,11 +12,14 @@ public abstract class Character {
     @Getter @Setter
     private int power;
 
+    private BasicKick kickInter;
+    public void kick(Character enemy) {
+        kickInter.kick(this, enemy);
+    }
+
     public void setHp(int hp) {
         this.hp = Math.max(0, hp);
     }
-
-    public abstract void kick(Character whoKick);
 
     public boolean isAlive() {
         return getHp() > 0;
